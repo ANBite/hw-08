@@ -17,12 +17,10 @@ services:
     depends_on:
       - db
     environment:
-      # Conexión a la BD
       SONAR_JDBC_URL: jdbc:postgresql://db:5432/sonar
       SONAR_JDBC_USERNAME: sonar
       SONAR_JDBC_PASSWORD: sonar
-      # Si tu máquina es de desarrollo y hay checks de ES que bloqueen, puedes deshabilitarlos (solo dev):
-      # SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: "true"
+     
     ports:
       - "9000:9000"
     volumes:
